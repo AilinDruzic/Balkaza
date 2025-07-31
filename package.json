@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "turbo run build",
+    "build": "echo 'build disabled for now'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
