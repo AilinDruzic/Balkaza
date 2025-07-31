@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js with pnpm
+      - name: Setup Node.js and install pnpm
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -24,6 +24,10 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
+          run_install: false  # vi kör install separat nedan
+
+      - name: Print pnpm version (debug)
+        run: pnpm --version
 
       - name: Install dependencies
         run: pnpm install
